@@ -1,0 +1,1 @@
+StudySync is a custom package for navigating word documents internally. Built on templated word documents stored on an internal server. 
