@@ -1241,7 +1241,7 @@ class SearchWindow(QWidget):
 
     def __init__(self, item, mw):
         super().__init__()
-        self.api  = searchingAPI("/Volumes/Company/Becca/Study Database/Database")
+        self.api  = searchingAPI("/Database")
         self.api.create_filtered()
         self.mw = mw
         self.item = item
@@ -1433,7 +1433,6 @@ class SearchWindow(QWidget):
     
         # self.comp_count.setText(str(len(self.filepaths)) + " studies found:")
         self.stacked_layout.setCurrentIndex(1)
-
 
 
 if __name__ == "__main__":

@@ -1,0 +1,9 @@
+dateparser==1.2.0
+docx==0.2.4
+docxtpl==0.19.1
+numpy==2.2.4
+polars==1.26.0
+PyQt5==5.15.11
+PyQt5_sip==12.13.0
+python_docx==1.1.0
+spacy==3.7.4

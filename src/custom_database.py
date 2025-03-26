@@ -3,8 +3,6 @@ import polars as pl
 import warnings
 from datetime import datetime
 
-class DatabaseError(Exception):
-    pass
 
 def dict_from_cols(cols, data_row):
     data = {}
@@ -483,7 +481,7 @@ class searchingAPI(CsvDatabase):
 
     def __init__(self, folder = None):
         if folder is None:
-            folder = "/Volumes/Company/Becca/Study Database/Database"
+            folder = "/Database"
 
         schema = {
             
@@ -627,7 +625,7 @@ class referenceAPI(CsvDatabase):
 
     def __init__(self, folder = None):
         if folder is None:
-            folder = "/Volumes/Company/Becca/Study Database/Reference"
+            folder = "/Reference"
 
         schema = {
             "strain": {

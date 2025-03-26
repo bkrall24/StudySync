@@ -5,7 +5,7 @@ from docx.shared import Inches, Mm
 import polars as pl
 import os
 
-def get_matching_bio(name, template, bios = '/Volumes/Company/Becca/Study Database/Proposal_Bios.docx'):
+def get_matching_bio(name, template, bios):
     bio_doc = Document(bios)
     starts = [ind for ind, p in enumerate(bio_doc.paragraphs) if name.lower() in p.text.lower()]
     
@@ -23,8 +23,7 @@ def get_matching_bio(name, template, bios = '/Volumes/Company/Becca/Study Databa
     else:
          return None
 
-def get_matching_pic(name, pics = '/Volumes/Company/Becca/Study Database/Bio_Pics',
-                     refer ="/Volumes/Company/Becca/Study Database/Bio_Pics/Bio_Pic_Dimensions.csv"):
+def get_matching_pic(name, pics, refer):
     reference = pl.read_csv(refer)
     filenames = os.listdir(pics)
     possible_pics =  [os.path.splitext(x)[0] for x in filenames]
@@ -42,8 +41,7 @@ def get_matching_pic(name, pics = '/Volumes/Company/Becca/Study Database/Bio_Pic
         #  print(f"{name} not found")
          return None, None
 
-def fill_proposal_template(data_dict, save_path = "/Users/rebeccakrall/Desktop/test_filling.docx", 
-                           template_path = "/Volumes/Company/Becca/Study Database/Proposal_template_update_dxpt.docx"):
+def fill_proposal_template(data_dict, save_path, template_path):
     template = DocxTemplate(template_path)
     place = template.get_undeclared_template_variables()
     replace = {k : None for k in place}

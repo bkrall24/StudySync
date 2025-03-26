@@ -795,10 +795,10 @@ class buildingAPI(CsvDatabase):
 
     def __init__(self, folder, ref_db = None):
         if folder is None:
-            folder = "/Volumes/Company/Becca/Databases"
+            folder = "/Databases"
 
         if ref_db is None:
-            self.ref_db = CsvDatabase("/Volumes/Company/Becca/Databases")
+            self.ref_db = CsvDatabase("/Databases")
         else:
             self.ref_db = CsvDatabase(folder = ref_db)
             self.ref_db.load_all()

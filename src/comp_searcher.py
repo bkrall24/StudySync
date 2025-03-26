@@ -18,7 +18,7 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.api  = searchingAPI("/Volumes/Company/Becca/Study Database/Database")
+        self.api  = searchingAPI("/Database")
         # self.api = searchingAPI("/Users/rebeccakrall/Desktop/Database4")
 
         # initialize all search parameters
